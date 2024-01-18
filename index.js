@@ -12,6 +12,8 @@ const io = new Server(server, {
   cors: {
     origin: "https://messanger-frontend-lemon.vercel.app/",
     methods: ["GET", "PUT"],
+    allowedHeaders: ["my-custom-header"],
+    credentials: true,
   },
 });
 
