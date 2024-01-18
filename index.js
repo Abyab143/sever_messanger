@@ -10,7 +10,7 @@ app.use(cors());
 //socket io server setup
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://messanger-frontend-lemon.vercel.app/",
     methods: ["GET", "PUT"],
   },
 });
