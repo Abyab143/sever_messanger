@@ -5,15 +5,12 @@ import http from "http";
 
 const app = express();
 const server = http.createServer(app);
-app.use(cors());
+app.use(cors({ origin: 'https://messanger-frontend-lemon.vercel.app/' }));
 
 //socket io server setup
 const io = new Server(server, {
   cors: {
-    origin: "https://messanger-frontend-lemon.vercel.app/",
     methods: ["GET", "PUT"],
-    allowedHeaders: ["my-custom-header"],
-    credentials: true,
   },
 });
 
