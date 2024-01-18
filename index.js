@@ -9,11 +9,11 @@ app.use(cors());
 
 // Socket.io server setup
 const io = new Server(server, {
- cors:{
-    origin: ["https://messanger-frontend-lemon.vercel.app/"],
+ cors: {
+    origin: "https://messanger-frontend-lemon.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
-  }
+  },
 });
 
 io.on("connection", (socket) => {
